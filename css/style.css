@@ -12,6 +12,7 @@ header {
     background-color: lightsalmon;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px
 }
 
@@ -39,12 +40,19 @@ header {
     font-size: 1.8rem;
 }
 
-.hidden {
-    display: none;
+.bc {
+    background-color: aqua;
 }
 
-.active {
-    display: block;
+.medio {
+    width: calc(780px / 9);
+    height: calc(780px / 9);
+}
+
+.difficile {
+    width: calc(780px / 7);
+    height: calc(780px / 7);
+
 }
 
 footer {
@@ -52,6 +60,3 @@ footer {
     padding: 10px;
 }
 
-.bc {
-    background-color: aqua;
-}

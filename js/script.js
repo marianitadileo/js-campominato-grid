@@ -6,14 +6,23 @@
 // grid e button
 const grid = document.querySelector(".grid");
 const button = document.getElementById("btn");
+const levels = document.getElementById("levels");
 
 // gestiamo il bottone quando viene cliccato
 button.addEventListener("click", function (){
+    if (levels.value == "facile") {
+        myBox = 100;
+    } else if (levels.value == "medio") {
+        myBox = 81;
+    } else {
+        myBox = 49;
+    }
+
     for (let i = 1; i <= 100; i++) {
         const myBox = document.createElement("div")
         myBox.classList.add("grid-items");
         grid.append(myBox);
-        myBox.innerHTML = i;
+        myBox.innerHTML = i; 
         myBox.addEventListener("click", boxClick)
     }
 });
@@ -22,4 +31,6 @@ button.addEventListener("click", function (){
     this.classList.add("bc");
     console.log(this.innerText);
 }
+
+
 
