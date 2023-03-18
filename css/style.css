@@ -39,6 +39,14 @@ header {
     font-size: 1.8rem;
 }
 
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
 footer {
     background-color: lightyellow;
     padding: 10px;
