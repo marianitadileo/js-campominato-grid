@@ -7,22 +7,19 @@
 const grid = document.querySelector(".grid");
 const button = document.getElementById("btn");
 
-// console.log(grid)
-// grid.classList.add("hidden");
-
-
-
- 
 // gestiamo il bottone quando viene cliccato
 button.addEventListener("click", function (){
     for (let i = 1; i <= 100; i++) {
         const myBox = document.createElement("div")
-        console.log(myBox);
         myBox.classList.add("grid-items");
         grid.append(myBox);
         myBox.innerHTML = i;
+        myBox.addEventListener("click", boxClick)
     }
 });
 
-
+ function boxClick(){ 
+    this.classList.add("bc");
+    console.log(this.innerText);
+}
 
